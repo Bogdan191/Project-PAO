@@ -1,5 +1,6 @@
 package main;
 
+import gui.LoginFrame;
 import model.Bus;
 import model.Truck;
 import model.Vehicle;
@@ -25,6 +26,8 @@ public class Main {
 
 
        }
+
+       new LoginFrame();
 
     }
 }

@@ -2,17 +2,36 @@ package model;
 
 public class Route {
     private String uniqueCode;
+    private String startPoint;
+    private String destination;
     private int length;
     private int time;
     private String stopPoints[];
 
-    public Route(String uniqueCode, int length, int time, String stopPoints[]) {
+    public Route(String uniqueCode, String startPoint, String destination, int length, int time, String stopPoints[]) {
         this.uniqueCode = uniqueCode;
+        this.startPoint = startPoint;
+        this.destination = destination;
         this.length = length;
         this.time = time;
         this.stopPoints = stopPoints;
     }
 
+    public String getStartPoint() {
+        return startPoint;
+    }
+
+    public void setStartPoint(String startPoint) {
+        this.startPoint = startPoint;
+    }
+
+    public String getDestination() {
+        return destination;
+    }
+
+    public void setDestination(String destination) {
+        this.destination = destination;
+    }
     public String getUniqueCode() {
         return uniqueCode;
     }

@@ -1,6 +1,6 @@
 package model;
 
-public class Bagage {
+public class Cargo {
     private String sender;
     private String recipient;
     private String description;
@@ -9,20 +9,18 @@ public class Bagage {
     private int weight;
     private int volume;
 
-    public Bagage(String sender, String recipient, String description,
-                  String pickUpLocation, String destination, int weight, int volume){
-
+    public Cargo(String sender, String recipient, String description, String pickUpLocation, String destination, int weight, int volume) {
         this.sender = sender;
         this.recipient = recipient;
         this.description = description;
-        this.pickUpLocation = pickUpLocation;
         this.destination = destination;
+        this.pickUpLocation = pickUpLocation;
         this.weight = weight;
         this.volume = volume;
     }
 
     public String getSender() {
-        return sender;
+        return this.sender;
     }
 
     public void setSender(String sender) {
@@ -30,23 +28,23 @@ public class Bagage {
     }
 
     public String getRecipient() {
-        return recipient;
+        return this.recipient;
     }
 
     public void setRecipient(String recipient) {
         this.recipient = recipient;
     }
 
-    public String getDescription() {
-        return description;
+    public String getDescrition() {
+        return this.description;
     }
 
-    public void setDescription(String description) {
-        this.description = description;
+    public void setDescrition(String descrition) {
+        this.description = descrition;
     }
 
     public String getPickUpLocation() {
-        return pickUpLocation;
+        return this.pickUpLocation;
     }
 
     public void setPickUpLocation(String pickUpLocation) {
@@ -54,7 +52,7 @@ public class Bagage {
     }
 
     public String getDestination() {
-        return destination;
+        return this.destination;
     }
 
     public void setDestination(String destination) {
@@ -62,7 +60,7 @@ public class Bagage {
     }
 
     public int getWeight() {
-        return weight;
+        return this.weight;
     }
 
     public void setWeight(int weight) {
@@ -70,7 +68,7 @@ public class Bagage {
     }
 
     public int getVolume() {
-        return volume;
+        return this.volume;
     }
 
     public void setVolume(int volume) {
