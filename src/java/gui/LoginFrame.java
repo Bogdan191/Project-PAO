@@ -48,9 +48,21 @@ public class LoginFrame extends JFrame {
         buttonLogin.addActionListener((ev) -> {
            logIn();
         });
+
+        registerButton.addActionListener((ev) ->{
+
+            registerPage();
+
+        });
         setDefaultCloseOperation(3);
         setLocationRelativeTo((Component)null);
         setVisible(true);
+    }
+
+    private void registerPage(){
+        this.dispose();
+        AddClient n = new AddClient();
+        n.setVisible(true);
     }
 
     private void logIn() {
