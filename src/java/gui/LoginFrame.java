@@ -65,8 +65,9 @@ public class LoginFrame extends JFrame {
         n.setVisible(true);
     }
 
+
     private void logIn() {
-        String username = this.textFieldUser.getText();
+        String username = textFieldUser.getText();
         String password = this.passwordField.getText();
         User user = new User(username, password);
         LoginService service = LoginService.getInstance();
@@ -75,6 +76,7 @@ public class LoginFrame extends JFrame {
             this.dispose();
             MainPageClient m = new MainPageClient();
             m.setVisible(true);
+            m.setUsername(username);
         } else {
             JOptionPane.showMessageDialog((Component)null, "Log in nereusit");
         }
