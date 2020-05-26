@@ -1,10 +1,7 @@
 package gui;
 
 import java.awt.Component;
-import javax.swing.JButton;
-import javax.swing.JFrame;
-import javax.swing.JLabel;
-import javax.swing.JPanel;
+import javax.swing.*;
 
 public class MainPageClient extends JFrame {
     private JPanel panel;
@@ -17,10 +14,14 @@ public class MainPageClient extends JFrame {
     private JButton soferiButton;
     private JButton ruteButton;
     private JLabel despreNoiLabel;
+    private JButton CUMPARABILETButton;
+    private JButton EXEPDIERECOLETButton;
+    private JButton istoricComeziButton;
+    private JPanel panel1;
 
     public MainPageClient() {
 
-        this.add(this.panel);
+        add(panel1);
         this.setSize(500, 600);
         this.pack();
         this.setVisible(true);
