@@ -4,10 +4,13 @@ import model.Cargo;
 import model.Route;
 import model.Ticket;
 import repositories.CargosRepository;
+import repositories.DBCargosRepository;
 import repositories.RoutesRepository;
 import repositories.TicketsRepository;
 import service.DeleteTicket;
 import javax.swing.*;
+
+import static repositories.CargosRepository.Type.DB;
 
 public class MainPageClient extends JFrame {
 
@@ -39,7 +42,7 @@ public class MainPageClient extends JFrame {
 
         RoutesRepository routesRepository = new RoutesRepository();
         TicketsRepository ticketsRepository = new TicketsRepository();
-        CargosRepository cargosRepository = new CargosRepository();
+        CargosRepository DBCargosRepository = CargosRepository.build(DB);
 
         buyTicketButton.addActionListener((ev) -> {
             BuyTicket b = new BuyTicket();
@@ -98,7 +101,7 @@ public class MainPageClient extends JFrame {
 
         historyButton.addActionListener((ev) ->{
 
-            Cargo[] c = cargosRepository.getCargos();
+            Cargo[] c = DBCargosRepository.getCargos();
             Ticket[] t = ticketsRepository.getTickets();
             StringBuilder comands = new StringBuilder("      Comenzile tale, " + username + ".\n   Bilete persoane: \n");
 

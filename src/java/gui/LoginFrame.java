@@ -2,12 +2,8 @@ package gui;
 
 import java.awt.Component;
 import java.awt.GridLayout;
-import javax.swing.JButton;
-import javax.swing.JFrame;
-import javax.swing.JLabel;
-import javax.swing.JOptionPane;
-import javax.swing.JPanel;
-import javax.swing.JTextField;
+import javax.swing.*;
+
 import model.User;
 import service.LoginService;
 
@@ -15,7 +11,7 @@ public class LoginFrame extends JFrame {
     private JButton buttonLogin;
     private JButton registerButton;
     private JTextField textFieldUser;
-    private JTextField passwordField;
+    private JPasswordField passwordField;
     private JLabel passwordText;
     private JLabel usernameText;
     private JPanel p1;
@@ -26,7 +22,7 @@ public class LoginFrame extends JFrame {
         buttonLogin = new JButton("Log in");
         registerButton = new JButton("Register");
         textFieldUser = new JTextField(20);
-        passwordField = new JTextField(20);
+        passwordField = new JPasswordField(20);
         passwordText = new JLabel("Password:");
         usernameText = new JLabel("Username:");
 
