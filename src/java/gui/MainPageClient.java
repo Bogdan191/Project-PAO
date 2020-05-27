@@ -7,30 +7,31 @@ import javax.swing.*;
 
 public class MainPageClient extends JFrame {
     private JPanel panel;
-    private JButton biletCalatorButton;
-    private JButton biletColetButton;
-    private JButton sediiButton;
     private JButton contactButton;
-    private JButton istoricComenziButton;
-    private JButton anulareBiletButton;
-    private JButton soferiButton;
-    private JButton ruteButton;
+    private JButton cancelTicketButton;
+    private JButton routesButton;
     private JLabel despreNoiLabel;
-    private JButton CUMPARABILETButton;
-    private JButton EXEPDIERECOLETButton;
-    private JButton istoricComeziButton;
+    private JButton buyTicketButton;
+    private JButton cargoSendButton;
+    private JButton historyButton;
     private JPanel panel1;
     private JLabel usernameLabel;
+    private JLabel showLabel;
     private String username;
     public MainPageClient() {
 
-
-
         add(panel1);
-        this.setSize(500, 600);
+        this.setSize(1500, 1600);
         this.pack();
         this.setVisible(true);
         this.setLocationRelativeTo((Component)null);
+
+        buyTicketButton.addActionListener((ev) -> {
+            BuyTicket b = new BuyTicket();
+            this.dispose();
+            b.setVisible(true);
+            b.setUsername(this.username);
+        });
 
 
     }

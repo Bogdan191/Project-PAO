@@ -5,10 +5,10 @@ public class Route {
     private String startPoint;
     private String destination;
     private int length;
-    private int time;
+    private String time;
     private String stopPoints[];
 
-    public Route(String uniqueCode, String startPoint, String destination, int length, int time, String stopPoints[]) {
+    public Route(String uniqueCode, String startPoint, String destination, int length, String time, String stopPoints[]) {
         this.uniqueCode = uniqueCode;
         this.startPoint = startPoint;
         this.destination = destination;
@@ -48,11 +48,11 @@ public class Route {
         this.length = length;
     }
 
-    public int getTime() {
+    public String getTime() {
         return time;
     }
 
-    public void setTime(int time) {
+    public void setTime(String time) {
         this.time = time;
     }
 

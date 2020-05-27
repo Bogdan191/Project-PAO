@@ -1,19 +1,20 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <form xmlns="http://www.intellij.com/uidesigner/form/" version="1" bind-to-class="gui.MainPageClient">
-  <grid id="27dc6" binding="panel1" layout-manager="GridLayoutManager" row-count="2" column-count="2" same-size-horizontally="false" same-size-vertically="false" hgap="-1" vgap="-1">
+  <grid id="27dc6" binding="panel1" layout-manager="GridLayoutManager" row-count="2" column-count="1" same-size-horizontally="false" same-size-vertically="false" hgap="-1" vgap="-1">
     <margin top="0" left="0" bottom="0" right="0"/>
     <constraints>
       <xy x="20" y="20" width="535" height="400"/>
     </constraints>
     <properties>
       <background color="-16624508"/>
+      <preferredSize width="650" height="400"/>
     </properties>
-    <border type="none"/>
+    <border type="none" title=""/>
     <children>
       <grid id="1cbee" layout-manager="GridLayoutManager" row-count="3" column-count="2" same-size-horizontally="false" same-size-vertically="false" hgap="-1" vgap="-1">
         <margin top="0" left="0" bottom="0" right="0"/>
         <constraints>
-          <grid row="0" column="0" row-span="2" col-span="2" vsize-policy="3" hsize-policy="3" anchor="1" fill="1" indent="0" use-parent-layout="false"/>
+          <grid row="0" column="0" row-span="2" col-span="1" vsize-policy="3" hsize-policy="3" anchor="0" fill="3" indent="0" use-parent-layout="false"/>
         </constraints>
         <properties>
           <background color="-16624517"/>
@@ -30,7 +31,7 @@
             </properties>
             <border type="none"/>
             <children>
-              <component id="9e8c" class="javax.swing.JButton" binding="CUMPARABILETButton" default-binding="true">
+              <component id="9e8c" class="javax.swing.JButton" binding="buyTicketButton">
                 <constraints>
                   <grid row="0" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="1" fill="1" indent="0" use-parent-layout="false"/>
                 </constraints>
@@ -38,7 +39,7 @@
                   <text value="CUMPARA BILET"/>
                 </properties>
               </component>
-              <component id="d96b6" class="javax.swing.JButton" binding="EXEPDIERECOLETButton" default-binding="true">
+              <component id="d96b6" class="javax.swing.JButton" binding="cargoSendButton">
                 <constraints>
                   <grid row="0" column="1" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
                 </constraints>
@@ -46,7 +47,7 @@
                   <text value="EXEPDIERE COLET"/>
                 </properties>
               </component>
-              <grid id="47d02" layout-manager="GridLayoutManager" row-count="6" column-count="1" same-size-horizontally="false" same-size-vertically="false" hgap="-1" vgap="-1">
+              <grid id="47d02" layout-manager="GridLayoutManager" row-count="5" column-count="1" same-size-horizontally="false" same-size-vertically="false" hgap="-1" vgap="-1">
                 <margin top="0" left="0" bottom="0" right="0"/>
                 <constraints>
                   <grid row="1" column="0" row-span="1" col-span="1" vsize-policy="3" hsize-policy="3" anchor="8" fill="2" indent="0" use-parent-layout="false"/>
@@ -56,33 +57,25 @@
                 </properties>
                 <border type="none"/>
                 <children>
-                  <component id="1c3b9" class="javax.swing.JButton" binding="sediiButton">
+                  <component id="9bec5" class="javax.swing.JButton" binding="routesButton">
                     <constraints>
                       <grid row="1" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
-                    </constraints>
-                    <properties>
-                      <text value="Sedii"/>
-                    </properties>
-                  </component>
-                  <component id="9bec5" class="javax.swing.JButton" binding="ruteButton" default-binding="true">
-                    <constraints>
-                      <grid row="2" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
                     </constraints>
                     <properties>
                       <text value="Rute"/>
                     </properties>
                   </component>
-                  <component id="a75f0" class="javax.swing.JButton" binding="anulareBiletButton" default-binding="true">
+                  <component id="a75f0" class="javax.swing.JButton" binding="cancelTicketButton">
                     <constraints>
-                      <grid row="3" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
+                      <grid row="2" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
                     </constraints>
                     <properties>
                       <text value="Anulare bilet"/>
                     </properties>
                   </component>
-                  <component id="36deb" class="javax.swing.JButton" binding="istoricComeziButton" default-binding="true">
+                  <component id="36deb" class="javax.swing.JButton" binding="historyButton">
                     <constraints>
-                      <grid row="4" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
+                      <grid row="3" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
                     </constraints>
                     <properties>
                       <text value="Istoric comezi"/>
@@ -90,7 +83,7 @@
                   </component>
                   <component id="8172e" class="javax.swing.JButton" binding="contactButton" default-binding="true">
                     <constraints>
-                      <grid row="5" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
+                      <grid row="4" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
                     </constraints>
                     <properties>
                       <text value="Contact"/>
@@ -109,6 +102,16 @@
                   </component>
                 </children>
               </grid>
+              <component id="358a1" class="javax.swing.JLabel" binding="showLabel">
+                <constraints>
+                  <grid row="1" column="1" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="9" fill="0" indent="0" use-parent-layout="false"/>
+                </constraints>
+                <properties>
+                  <background color="-1180929"/>
+                  <foreground color="-1180929"/>
+                  <text value="bogda"/>
+                </properties>
+              </component>
             </children>
           </grid>
           <component id="44b64" class="javax.swing.JLabel">
