@@ -3,7 +3,7 @@ package gui;
 import model.Route;
 import model.Ticket;
 import repositories.RoutesRepository;
-import repositories.TicketsRepository;
+import service.AddTicket;
 
 import javax.swing.*;
 import java.awt.event.ActionEvent;
@@ -19,7 +19,6 @@ public class BuyTicket extends JFrame{
     private String username;
 
     RoutesRepository routes = new RoutesRepository();
-    TicketsRepository ticketsRepository = new TicketsRepository();
     Route[] start;
     public BuyTicket(){
 
@@ -75,12 +74,14 @@ public class BuyTicket extends JFrame{
     }
     private void buyTicket(){
 
+        AddTicket s = new AddTicket();
+
         int pos = showDetails();
         String route = start[pos].getStartPoint() + "-" + start[pos].getDestination();
         String price = 0.5 * start[pos].getLength() + "de lei";
 
         Ticket t = new Ticket(username, start[pos].getUniqueCode(), route, price);
-        ticketsRepository.addTicket(t);
+        s.addTicket(t);
         MainPageClient n = new MainPageClient();
         this.dispose();
         n.setVisible(true);

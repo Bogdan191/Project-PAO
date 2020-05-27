@@ -33,6 +33,13 @@ public class MainPageClient extends JFrame {
             b.setUsername(this.username);
         });
 
+        cargoSendButton.addActionListener((ev) -> {
+            AddCargo b = new AddCargo();
+            this.dispose();
+            b.setVisible(true);
+            b.setUsername(username);
+        });
+
 
     }
 

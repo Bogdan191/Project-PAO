@@ -6,10 +6,10 @@ public class Cargo {
     private String description;
     private String pickUpLocation;
     private String destination;
-    private int weight;
-    private int volume;
+    private String weight;
+    private String volume;
 
-    public Cargo(String sender, String recipient, String description, String pickUpLocation, String destination, int weight, int volume) {
+    public Cargo(String sender, String recipient, String description, String pickUpLocation, String destination, String weight, String volume) {
         this.sender = sender;
         this.recipient = recipient;
         this.description = description;
@@ -59,19 +59,27 @@ public class Cargo {
         this.destination = destination;
     }
 
-    public int getWeight() {
-        return this.weight;
+    public String getDescription() {
+        return description;
     }
 
-    public void setWeight(int weight) {
+    public void setDescription(String description) {
+        this.description = description;
+    }
+
+    public String getWeight() {
+        return weight;
+    }
+
+    public void setWeight(String weight) {
         this.weight = weight;
     }
 
-    public int getVolume() {
-        return this.volume;
+    public String getVolume() {
+        return volume;
     }
 
-    public void setVolume(int volume) {
+    public void setVolume(String volume) {
         this.volume = volume;
     }
 }
