@@ -8,6 +8,7 @@ import service.AddTicket;
 import javax.swing.*;
 import java.awt.event.ActionEvent;
 import java.util.Arrays;
+import java.util.Random;
 
 public class BuyTicket extends JFrame{
     private JComboBox startBox;
@@ -79,8 +80,10 @@ public class BuyTicket extends JFrame{
         int pos = showDetails();
         String route = start[pos].getStartPoint() + "-" + start[pos].getDestination();
         String price = 0.5 * start[pos].getLength() + "de lei";
-
-        Ticket t = new Ticket(username, start[pos].getUniqueCode(), route, price);
+        Random rand = new Random();
+        int random = rand.nextInt((100 - 0) + 1) + 0;
+        String routeID = start[pos].getUniqueCode() + random;
+        Ticket t = new Ticket(username, routeID, route, price);
         s.addTicket(t);
         MainPageClient n = new MainPageClient();
         this.dispose();

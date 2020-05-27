@@ -1,6 +1,7 @@
 package model;
 
 public class Cargo {
+    private String username;
     private String sender;
     private String recipient;
     private String description;
@@ -9,7 +10,8 @@ public class Cargo {
     private String weight;
     private String volume;
 
-    public Cargo(String sender, String recipient, String description, String pickUpLocation, String destination, String weight, String volume) {
+    public Cargo(String username, String sender, String recipient, String description, String pickUpLocation, String destination, String weight, String volume) {
+        this.username = username;
         this.sender = sender;
         this.recipient = recipient;
         this.description = description;
@@ -81,5 +83,13 @@ public class Cargo {
 
     public void setVolume(String volume) {
         this.volume = volume;
+    }
+
+    public String getUsername() {
+        return username;
+    }
+
+    public void setUsername(String username) {
+        this.username = username;
     }
 }

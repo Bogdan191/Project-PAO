@@ -47,7 +47,7 @@ public class UserRepository {
                 }
             }
         } catch(SQLException e) {
-            e.printStackTrace();
+            System.out.println("Nu s-a gasit userul");
         }
 
         return null;
@@ -59,4 +59,5 @@ public class UserRepository {
     private final static  class SingleTonHolder {
             private static  final UserRepository INSTANCE = new UserRepository();
     }
+
 }

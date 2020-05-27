@@ -46,7 +46,7 @@ public class AddCargo extends JFrame{
            if(sender != null && recipient != null && pickUpLocation != null && destination != null && weight != null && volume != null) {
                corect = true;
                JOptionPane.showMessageDialog(null, "Inregistrare cu succes");
-               Cargo c = new Cargo(sender, recipient, description, pickUpLocation, destination, weight, volume);
+               Cargo c = new Cargo(username, sender, recipient, description, pickUpLocation, destination, weight, volume);
                serviceAdd.addCargoCommand(c);
                MainPageClient m = new MainPageClient();
                this.dispose();

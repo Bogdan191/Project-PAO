@@ -72,13 +72,13 @@ public class LoginFrame extends JFrame {
         User user = new User(username, password);
         LoginService service = LoginService.getInstance();
         if (service.login(user)) {
-            JOptionPane.showMessageDialog((Component)null, "Log in reusit!");
+            //JOptionPane.showMessageDialog((Component)null, "Log in reusit!");
             this.dispose();
             MainPageClient m = new MainPageClient();
             m.setVisible(true);
             m.setUsername(username);
         } else {
-            JOptionPane.showMessageDialog((Component)null, "Log in nereusit");
+            JOptionPane.showMessageDialog((Component)null, "User-ul si/sau parola incorecte. \n Log in nereusit!");
         }
 
     }
