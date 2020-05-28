@@ -19,9 +19,11 @@ Link catre prezentare aplicatie: https://youtu.be/UviQ63nTduQ
    4. Fereastra de cumparare bilet
    5. fereastra pentru expedierea unui colet
    
-    Datele au fost salvate in general intr-o baza de date locala, dar au fost utilizate si fisiere sau liste prin 'contracte'(folosite la repo-ul pentru comenzile efectuate pentru expedierea coletelor).
+  Datele au fost salvate in general intr-o baza de date locala, dar au fost utilizate si fisiere sau liste prin 'contracte'(folosite   
+la repo-ul pentru comenzile efectuate pentru expedierea coletelor).
     
-    Partea a doua a aplicatiei este reprezentata de utilizarile destinate administratorului care in 
+   
+   Partea a doua a aplicatiei este reprezentata de utilizarile destinate administratorului care in 
  principal poate adauga/sterge rute, anagajati, useri, poate da puncte bonus utilizatorilor care au 
  un numar de comenzi etc. Aceasta urmeaza sa fie implementata, in maniera in care a fost implementata 
  prima(prezinta aceleasi principii de baza).
