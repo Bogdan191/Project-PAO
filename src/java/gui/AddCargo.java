@@ -20,7 +20,7 @@ public class AddCargo extends JFrame{
     public AddCargo() {
         add(mainPanel);
 
-        addCargoButton.addActionListener((ev) -> {
+        addCargoButton.addActionListener((ev) -> { // buton care inregistreaza comanda actuala
             addCargo();
         });
 
@@ -29,9 +29,10 @@ public class AddCargo extends JFrame{
         setVisible(true);
     }
 
-    public void addCargo(){
+    public void addCargo(){ // functia care se apeleaza la apasarea butonului 'addCargoButton'
 
-        service.AddCargo serviceAdd = new service.AddCargo();
+        service.AddCargo serviceAdd = new service.AddCargo(); /// obiect de tip serviciu care adauga in baza de date 'cargo'
+                                                                // un obiect de tip 'Cargo'
 
         String sender = senderField.getText();
         String recipient = recipientField.getText();
@@ -41,16 +42,17 @@ public class AddCargo extends JFrame{
         String weight = weightField.getText();
         String volume = volumeField.getText();
         boolean corect = false;
-        while(!corect) {
+        while(!corect) { /// cat timp datele nu sunt corecte, incearca din nou sa completezi
 
            if(sender != null && recipient != null && pickUpLocation != null && destination != null && weight != null && volume != null) {
+               ///daca toate campurile sunt completate, atunci inseamna ca input ul este corect si inregistreaza cererea
                corect = true;
                JOptionPane.showMessageDialog(null, "Inregistrare cu succes");
                Cargo c = new Cargo(username, sender, recipient, description, pickUpLocation, destination, weight, volume);
-               serviceAdd.addCargoCommand(c);
-               MainPageClient m = new MainPageClient();
+               serviceAdd.addCargoCommand(c); /// functia din serviciu care inregistreaza in baza de date
+               MainPageClient m = new MainPageClient(); /// se revine la pagina initiala
                this.dispose();
-               m.setUsername(username);
+               m.setUsername(username); /// propagarea username-ului, ca sa nu fie pierdut
                m.setVisible(true);
            }else {
                JOptionPane.showMessageDialog(null, "Date incorecte");

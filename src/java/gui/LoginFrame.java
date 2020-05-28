@@ -18,7 +18,7 @@ public class LoginFrame extends JFrame {
     private JPanel p2;
     private JPanel p3;
 
-    public LoginFrame() {
+    public LoginFrame() { // crearea layout-ului
         buttonLogin = new JButton("Log in");
         registerButton = new JButton("Register");
         textFieldUser = new JTextField(20);
@@ -41,11 +41,11 @@ public class LoginFrame extends JFrame {
         p2.add(passwordField);
         p3.add(buttonLogin);
         p3.add(registerButton);
-        buttonLogin.addActionListener((ev) -> {
+        buttonLogin.addActionListener((ev) -> { //buton pentru login
            logIn();
         });
 
-        registerButton.addActionListener((ev) ->{
+        registerButton.addActionListener((ev) ->{ //buton pentru inregistrarea unui nou cont
 
             registerPage();
 
@@ -55,7 +55,7 @@ public class LoginFrame extends JFrame {
         setVisible(true);
     }
 
-    private void registerPage(){
+    private void registerPage(){ // se deschide o noua fereastra 'AddClient' care se ocupa cu inregistrarea unui user
         this.dispose();
         AddClient n = new AddClient();
         n.setVisible(true);
@@ -66,14 +66,14 @@ public class LoginFrame extends JFrame {
         String username = textFieldUser.getText();
         String password = this.passwordField.getText();
         User user = new User(username, password);
-        LoginService service = LoginService.getInstance();
-        if (service.login(user)) {
+        LoginService service = LoginService.getInstance(); //serviciu folosit pentru login
+        if (service.login(user)) { ///daca logarea s-a efectuat cu succes, se deschide fereastra principala
             //JOptionPane.showMessageDialog((Component)null, "Log in reusit!");
             this.dispose();
             MainPageClient m = new MainPageClient();
             m.setVisible(true);
             m.setUsername(username);
-        } else {
+        } else { ///altfel, se afiseaza un mesaj corespunzator
             JOptionPane.showMessageDialog((Component)null, "User-ul si/sau parola incorecte. \n Log in nereusit!");
         }
 

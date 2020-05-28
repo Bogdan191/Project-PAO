@@ -44,21 +44,21 @@ public class MainPageClient extends JFrame {
         TicketsRepository ticketsRepository = new TicketsRepository();
         CargosRepository DBCargosRepository = CargosRepository.build(DB);
 
-        buyTicketButton.addActionListener((ev) -> {
-            BuyTicket b = new BuyTicket();
+        buyTicketButton.addActionListener((ev) -> { // buton pentru cumpararea unui nou bilet
+            BuyTicket b = new BuyTicket(); // se deschide o noua fereastra care in care se efectueaza actiunea de cumparare
             this.dispose();
             b.setVisible(true);
-            b.setUsername(this.username);
+            b.setUsername(this.username); // se propaga username-ul din fereastra principala la noua fereastra
         });
 
-        cargoSendButton.addActionListener((ev) -> {
+        cargoSendButton.addActionListener((ev) -> { // buton pentru expedierea unui colet
             AddCargo b = new AddCargo();
             this.dispose();
             b.setVisible(true);
-            b.setUsername(username);
+            b.setUsername(username); // se propaga username-ul catre noua fereastra
         });
 
-        routesButton.addActionListener((ev) -> {
+        routesButton.addActionListener((ev) -> { // buton care afiseaza rutele disponibile din baza de date
 
             Route[] routes  = routesRepository.getRoutes();
             StringBuilder message;
@@ -75,14 +75,16 @@ public class MainPageClient extends JFrame {
             }
         });
 
-        cancelTicketButton.addActionListener((ev) -> {
+        cancelTicketButton.addActionListener((ev) -> { //afisarea label-ului si butonului care se ocupa cu stergerea biletului
             codTicketLabel.setVisible(true);
+            codTicketLabel.setText("");
             codTicketLabel.setText(null);
             codTicketTextField.setVisible(true);
             cancelButton.setVisible(true);
         });
 
-        cancelButton.addActionListener((ev) ->{
+        cancelButton.addActionListener((ev) ->{ // stergerea biletului din baza de date, daca exista,
+                                                // cautarea biletului se face dupa codul unic pe care l are fiecare
 
             String id = codTicketTextField.getText();
 
@@ -90,7 +92,7 @@ public class MainPageClient extends JFrame {
                 JOptionPane.showMessageDialog(null, "Completeaza casuta cu codul unic al biletului!");
 
             }else{
-                DeleteTicket service = new DeleteTicket();
+                DeleteTicket service = new DeleteTicket(); ///serviciu care sterge din baza de date biletul corespunzator
                 service.deleteTicket(id);
                 codTicketLabel.setVisible(false);
                 codTicketTextField.setVisible(false);
@@ -99,7 +101,7 @@ public class MainPageClient extends JFrame {
 
         });
 
-        historyButton.addActionListener((ev) ->{
+        historyButton.addActionListener((ev) ->{ /// afiseaza toate biletele si toate coletele expediate de user
 
             Cargo[] c = DBCargosRepository.getCargos();
             Ticket[] t = ticketsRepository.getTickets();
@@ -126,7 +128,7 @@ public class MainPageClient extends JFrame {
 
         });
 
-        contactButton.addActionListener((ev) ->{
+        contactButton.addActionListener((ev) ->{ ///afisarea unor date despre aplicatie.
             String msg = "Site: www.dibi-transport.ro \n Sediu central: Bucuresti \n Numar de telefon: 0720200200";
             JOptionPane.showMessageDialog(null, msg);
         });

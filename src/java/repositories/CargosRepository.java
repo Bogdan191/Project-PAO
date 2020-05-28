@@ -5,7 +5,7 @@ import model.Cargo;
 import java.io.IOException;
 import java.lang.reflect.Type;
 
-public interface CargosRepository {
+public interface CargosRepository { //contract intre cele 2 tipuri de 'CorgosRepository' si servicii
 
     void addCargoCommand(Cargo c);
     Cargo[] getCargos();

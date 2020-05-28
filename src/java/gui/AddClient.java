@@ -22,11 +22,11 @@ public class AddClient extends JFrame{
         setDefaultCloseOperation(EXIT_ON_CLOSE);
         setLocationRelativeTo(null);
 
-        backToLoginButton.addActionListener((ev) -> {
+        backToLoginButton.addActionListener((ev) -> { /// buton care duce inapoi la pagina de login
             backToLogin();
         });
 
-        registerButton.addActionListener((ev) -> {
+        registerButton.addActionListener((ev) -> { /// buton care inregistreaza noul cont de user
             addClient();
         });
 
@@ -34,23 +34,23 @@ public class AddClient extends JFrame{
 
     }
 
-    private void backToLogin(){
+    private void backToLogin(){ /// functia asociata butonului 'backToLoginButton'
         this.dispose();
         LoginFrame newFrame = new LoginFrame();
         newFrame.setVisible(true);
     }
 
-    private void addClient() {
+    private void addClient() { ///functia asociata butonului 'registerButton'
 
         String username = usernameText.getText();
         String password = passwordText.getText();
         String name = nameText.getText();
         String phoneNumber = phoneNumberText.getText();
 
-        service.AddClient serviceAdd = new service.AddClient();
+        service.AddClient serviceAdd = new service.AddClient(); /// serviciu care adauga in baza de date noul cont de user
 
         boolean corect = false;
-        while(!corect){
+        while(!corect){ /// cat timp input-ul de date este incorect, reincearca
             if(username.equals("")) {
                 JOptionPane.showMessageDialog(null, "Te rog completeaza campul 'username'");
                 break;
@@ -85,7 +85,7 @@ public class AddClient extends JFrame{
             }
         }
 
-        if(corect){
+        if(corect){ //se adauga in baza de date si se revine la pagina de login
             serviceAdd.addClient(new Client(username, password, name, phoneNumber, 0));
             this.dispose();
             LoginFrame newFrame = new LoginFrame();
