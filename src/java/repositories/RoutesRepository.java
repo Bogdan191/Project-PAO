@@ -46,8 +46,6 @@ public class RoutesRepository {
             }
                 return routes;
 
-
-
         }catch(SQLException e) {
             System.out.println("Eroare in getRoutes()");
 

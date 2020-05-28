@@ -4,7 +4,7 @@ import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.SQLException;
 
-public class DataBaseConnection { /// conectarea la baza de date
+public class DataBaseConnection { /// conectarea la baza de date, clasa care este singleton, adica poate exista maxim un obiect de acest tip
 
     public DataBaseConnection() {
 

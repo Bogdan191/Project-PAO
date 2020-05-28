@@ -14,11 +14,12 @@ public interface CargosRepository { //contract intre cele 2 tipuri de 'CorgosRep
         switch(type){
             case DB: return new DBCargosRepository();
             case FILE: return new FileCargosRepository();
+            case ARRAY: return new ArrayCargosRepository();
         }
         throw new RuntimeException("No such type");
     }
     enum Type{
-        DB, FILE
+        DB, FILE, ARRAY
     }
 
 

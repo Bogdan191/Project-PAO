@@ -58,12 +58,11 @@ public class DBCargosRepository implements  CargosRepository {
                 index++;
             }
             return c;
-
         }catch(SQLException e) {
             e.printStackTrace();
         }
 
-        return null;
+        return c;
     }
 
 
