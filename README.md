@@ -4,7 +4,7 @@
    ### Observatii prezentare: 
    1. S-a modificat scrierea in fisier astfel incat fiecare comanda sa fie pe cate un rand
   
-   ###Aplicatia este un demo care permite urmatoarele actiuni pentru utilizator:
+  ### Aplicatia este un demo care permite urmatoarele actiuni pentru utilizator:
    1. Logare
    2. Inregistrare user
    3. Cumparare bilet
@@ -14,7 +14,7 @@
    7. Istoricul comenzilor efectuate de user-ul curent
    8. Afisarea datelor de contact ale firmei.
    
-   ###Interfata grafica a acestei aplicatii este formata din 5 ferestre:
+   ### Interfata grafica a acestei aplicatii este formata din 5 ferestre:
    1. Fereastra de logare
    2. Fereastra de inregistrare
    3. Fereastra paginei principale a aplicatiei de unde utilizator executa anumite interogari/actiuni
