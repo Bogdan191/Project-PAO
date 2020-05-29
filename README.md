@@ -2,7 +2,7 @@
  
 ## Link catre prezentare aplicatie: https://youtu.be/UviQ63nTduQ
    ### Observatii prezentare: 
-         1. S-a modificat scrierea in fisier astfel incat fiecare comanda sa fie pe cate un rand
+   1. S-a modificat scrierea in fisier astfel incat fiecare comanda sa fie pe cate un rand
   
     Aplicatia este un demo care permite urmatoarele actiuni pentru utilizator:
    1. Logare
